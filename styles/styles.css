@@ -12,13 +12,17 @@
   --color-water: linear-gradient(to left, #142544, #1b6d6e);
 }
 
-body {
+.wrapper {
   background-image: var(--color-bg);
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: flex-end;
   overflow: hidden;
+}
+
+.flower__wrapper {
+  position: relative;
 }
 
 .flower {
@@ -362,14 +366,13 @@ body {
   width: 30px;
   position: absolute;
   top: 0;
-  left: 337px;
+  left: 0;
 }
 
 .butterfly_2 {
   position: absolute;
-  top: -500px;
-  left: 200px;
-  transform: rotateX(500deg) rotateY(20deg) rotateZ(-50deg) translateY(0px);
+  top: -200px;
+  left: 255px;
 }
 
 .butterfly::before {
@@ -549,6 +552,40 @@ body {
   }
 }
 
-.wrapper {
-  position: relative;
+span {
+  position: absolute;
+  pointer-events: none;
+  filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.5));
+  animation: fadeInOut 1s linear infinite;
+}
+
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  20%,
+  80% {
+    opacity: 1;
+  }
+}
+
+span::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("../img/heart.png");
+  background-size: cover;
+  animation: moveShape 1s linear infinite;
+}
+
+@keyframes moveShape {
+  0% {
+    transform: translate(0) rotate(0deg);
+  }
+  100% {
+    transform: translate(300px) rotate(360deg);
+  }
 }
