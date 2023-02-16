@@ -8,96 +8,29 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="wrapper">
-      <div class="flower__wrapper">
-        <div class="flower">
-          <div class="f-wrapper">
-            <div class="flower__line"></div>
-            <div class="f">
-              <div class="flower__leaf flower__leaf--1"></div>
-              <div class="flower__leaf flower__leaf--2"></div>
-              <div class="flower__leaf flower__leaf--3"></div>
-              <div class="flower__leaf flower__leaf--4"></div>
-              <div class="flower__leaf flower__leaf--5"></div>
-              <div class="flower__leaf flower__leaf--6"></div>
-              <div class="flower__leaf flower__leaf--7"></div>
-              <div
-                class="flower__leaf flower__leaf--8 flower__fall-down--yellow"
-              ></div>
-            </div>
-          </div>
-
-          <div class="f-wrapper f-wrapper--2">
-            <div class="flower__line"></div>
-            <div class="f">
-              <div class="flower__leaf flower__leaf--1"></div>
-              <div class="flower__leaf flower__leaf--2"></div>
-              <div class="flower__leaf flower__leaf--3"></div>
-              <div class="flower__leaf flower__leaf--4"></div>
-              <div class="flower__leaf flower__leaf--5"></div>
-              <div class="flower__leaf flower__leaf--6"></div>
-              <div class="flower__leaf flower__leaf--7"></div>
-              <div
-                class="flower__leaf flower__leaf--8 flower__fall-down--pink"
-              ></div>
-            </div>
-          </div>
-
-          <div class="f-wrapper f-wrapper--3">
-            <div class="flower__line"></div>
-            <div class="f">
-              <div class="flower__leaf flower__leaf--1"></div>
-              <div class="flower__leaf flower__leaf--2"></div>
-              <div class="flower__leaf flower__leaf--3"></div>
-              <div class="flower__leaf flower__leaf--4"></div>
-              <div class="flower__leaf flower__leaf--5"></div>
-              <div class="flower__leaf flower__leaf--6"></div>
-              <div class="flower__leaf flower__leaf--7"></div>
-              <div
-                class="flower__leaf flower__leaf--8 flower__fall-down--purple"
-              ></div>
-            </div>
-          </div>
-          <div class="flower__glass"></div>
+    <div class="container">
+      <div class="text" data-splitting="">Happy Birthday, JavaScript!</div>
+      <div class="presents">
+        <div class="present orange">
+          <div class="lid"></div>
+          <div class="box"></div>
+          <div class="bow"></div>
+          <div class="ribbon"></div>
         </div>
-
-        <div class="butterfly">
-          <div class="wing">
-            <div class="bit"></div>
-            <div class="bit"></div>
-          </div>
-          <div class="wing">
-            <div class="bit"></div>
-            <div class="bit"></div>
-          </div>
+        <div class="present blue">
+          <div class="lid"></div>
+          <div class="box"></div>
+          <div class="bow"></div>
+          <div class="ribbon"></div>
         </div>
-        <div class="shadow"></div>
+        <div class="present green">
+          <div class="lid"></div>
+          <div class="box"></div>
+          <div class="bow"></div>
+          <div class="ribbon"></div>
+        </div>
       </div>
     </div>
-    <script>
-      document.addEventListener("mousemove", function (e) {
-        let body = document.querySelector("body");
-        let heart = document.createElement("span");
-        let x = e.offsetX;
-        let y = e.offsetY;
-
-        let size = Math.random() * 80;
-
-        heart.style.left = x + "px";
-        heart.style.top = y + "px";
-        heart.style.width = 20 + size + "px";
-        heart.style.height = 20 + size + "px";
-
-        let transfromValue = Math.random() * 360;
-
-        heart.style.transform = "rotate(" + transfromValue + "deg)";
-
-        body.appendChild(heart);
-
-        setTimeout(function () {
-          heart.remove();
-        }, 2000);
-      });
-    </script>
+    <script src="./script.js"></script>
   </body>
 </html>
